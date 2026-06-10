@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏫</text></svg>">
 </head>
 <body>
-
+ 
   <!-- Floating Background Bubbles -->
   <div class="bg-bubbles">
     <div class="bubble"></div>
@@ -43,7 +43,7 @@
           Classrooms
         </button>
         <button class="nav-tab" data-tab="extracurriculars">
-          <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.58 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.58 10.57 20 12 20c4.97 0 9-4.03 9-9S16.97 3 12 3zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 7 15.5 7 14 7.67 14 8.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 7 8.5 7 7 7.67 7 8.5 7.67 10 8.5 10z"/></svg>
           Fun Clubs
         </button>
         <button class="nav-tab" data-tab="office">
@@ -63,17 +63,17 @@
         <div class="welcome-box">
           <div class="glass-panel">
             <h2>Welcome to Country Tops!</h2>
-            <p>Hi student! Miss Grace is so glad you are here today. Select a classroom to start exploring our 65 interactive lessons in Math, English, Science, and Social Studies, or visit the Fun Clubs for dancing, drawing, soccer, and games!</p>
+            <p>Hi student! Miss Grace is so glad you are here today. Select a classroom to start exploring our 65 interactive lessons in Math, English, Science, and Social Studies, or visit the Fun Clubs for extracurriculars!</p>
             <button class="btn btn-pink" onclick="switchTab('classrooms')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
               Go to Classrooms
             </button>
             <button class="btn btn-outline" onclick="switchTab('extracurriculars')" style="margin-left: 0.5rem;">
-              <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.5 11.35z"/></svg>
               Extracurriculars
             </button>
           </div>
-          
+         
           <div class="bulletin-board">
             <div class="bulletin-title">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
@@ -86,7 +86,7 @@
         <div class="stats-sidebar">
           <div class="stats-card">
             <h2 style="color: var(--green-dark); border-bottom: 2px solid var(--cream-border); padding-bottom: 0.5rem; font-size: 1.3rem;">School Progress</h2>
-            
+           
             <div class="stat-item">
               <div class="stat-icon">
                 <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -129,7 +129,7 @@
     <!-- Tab 2: Classrooms (Lessons Catalog) -->
     <section id="tab-classrooms" class="tab-content">
       <div class="classroom-layout">
-        
+       
         <!-- Sidebar Filters -->
         <aside class="sidebar-filters">
           <div class="filter-group">
@@ -156,15 +156,15 @@
               Math
             </button>
             <button class="subject-chip" data-subject="english" onclick="filterSubject('english')">
-              <svg viewBox="0 0 24 24"><path d="M12 3c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10S17.52 3 12 3zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v2.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 3c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10S17.52 3 12 3zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v2.93zm6.9-2.54c.59-.93.9-2.01.9-3.16 0-3.54-2.9-6.43-6.43-6.43S5.04 8.46 5.04 12s2.9 6.43 6.43 6.43c1.59 0 3.06-.58 4.21-1.52l4.28 4.28c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-4.39-4.39z"/></svg>
               English
             </button>
             <button class="subject-chip" data-subject="science" onclick="filterSubject('science')">
-              <svg viewBox="0 0 24 24"><path d="M19.36 2.72L20.8 4.16l-4.32 4.32v1.44l-5.76 5.76c.42.45.68 1.05.68 1.72 0 1.38-1.12 2.5-2.5 2.5s-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5c.67 0 1.27.26 1.72.68l5.76-5.76H15l4.36-4.32z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M19.36 2.72L20.8 4.16l-4.32 4.32v1.44l-5.76 5.76c.42.45.68 1.05.68 1.72 0 1.38-1.12 2.5-2.5 2.5s-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5c.67 0 1.27.26 1.72.68l5.76-5.76h-1.44l-4.32-4.32.44-.44 4.32 4.32h1.44l4.32-4.32 2.16 2.16z"/></svg>
               Science
             </button>
             <button class="subject-chip" data-subject="socialstudies" onclick="filterSubject('socialstudies')">
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v2.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v2.93zm6.9-2.54c.59-.93.9-2.01.9-3.16 0-3.54-2.9-6.43-6.43-6.43S5.04 8.46 5.04 12s2.9 6.43 6.43 6.43c1.59 0 3.06-.58 4.21-1.52l4.28 4.28c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-4.39-4.39z"/></svg>
               Social Studies
             </button>
           </div>
@@ -187,7 +187,7 @@
           🎨 Art Room
         </button>
         <button class="extra-tab-btn" data-extra="sports" onclick="switchExtraView('sports')">
-          ⚽ Sports Arena
+          ⚽ Sports
         </button>
         <button class="extra-tab-btn" data-extra="games" onclick="switchExtraView('games')">
           🎮 Playground
@@ -198,47 +198,11 @@
       <div id="extra-dance" class="extra-subview active">
         <div class="glass-panel pink">
           <h2>Miss Grace's Dance Studio</h2>
-          <p>Learn ballet! Click the dance moves below to choreograph a ballet routine. Watch the dancer perform the moves under the stage lights!</p>
+          <p>Share your ballet interests with Miss Grace! Click the button below to send her an email about ballet.</p>
           <br>
-          <div class="dance-container">
-            <div class="dance-stage" id="stage">
-              <div class="spotlight spotlight-left"></div>
-              <div class="spotlight spotlight-right"></div>
-              <!-- SVG Dancer Character -->
-              <svg class="dancer-character" id="dancer" viewBox="0 0 100 150">
-                <!-- Head -->
-                <circle cx="50" cy="20" r="10" fill="#FAD2E1"/>
-                <circle cx="50" cy="12" r="5" fill="#E5838B"/> <!-- Hair bun -->
-                <!-- Body (Leotard) -->
-                <path d="M42 30h16l-4 35H46z" fill="#E5838B"/>
-                <!-- Tutu (Pink dress) -->
-                <path d="M25 62c0 0 15 15 25 15s25-15 25-15l-10-8H35z" fill="#FFB7B2"/>
-                <!-- Left Arm -->
-                <path id="left-arm" d="M42 30C35 25 25 25 20 30" fill="none" stroke="#FAD2E1" stroke-width="6" stroke-linecap="round"/>
-                <!-- Right Arm -->
-                <path id="right-arm" d="M58 30C65 25 75 25 80 30" fill="none" stroke="#FAD2E1" stroke-width="6" stroke-linecap="round"/>
-                <!-- Left Leg -->
-                <path id="left-leg" d="M46 65v55" fill="none" stroke="#FAD2E1" stroke-width="7" stroke-linecap="round"/>
-                <path d="M46 120h5" fill="none" stroke="#E5838B" stroke-width="4" stroke-linecap="round"/> <!-- Ballet shoe -->
-                <!-- Right Leg -->
-                <path id="right-leg" d="M54 65v55" fill="none" stroke="#FAD2E1" stroke-width="7" stroke-linecap="round"/>
-                <path d="M54 120h5" fill="none" stroke="#E5838B" stroke-width="4" stroke-linecap="round"/> <!-- Ballet shoe -->
-              </svg>
-            </div>
-            
-            <div class="dance-controls-box">
-              <h3 style="color: var(--green-dark); margin-bottom: 1rem;">Ballet Moves</h3>
-              <div class="dance-moves-grid">
-                <button class="dance-btn" onclick="triggerDanceMove('plie')">Plié</button>
-                <button class="dance-btn" onclick="triggerDanceMove('pirouette')">Pirouette</button>
-                <button class="dance-btn" onclick="triggerDanceMove('grandjete')">Grand Jeté</button>
-                <button class="dance-btn" onclick="triggerDanceMove('arabesque')">Arabesque</button>
-                <button class="dance-btn" onclick="triggerDanceMove('chasse')">Chassé</button>
-                <button class="dance-btn" onclick="clearStage()" style="background: #F7EEDB; border-color: var(--cream-border);">Bow & Finish</button>
-              </div>
-              <div id="choreography-status" style="margin-top: 1.5rem; font-weight: 700; color: var(--pink-medium); text-align: center;">Choreograph your first move!</div>
-            </div>
-          </div>
+          <button class="btn btn-pink" onclick="openEmailForBallet()" style="width: 100%; height: 50px; font-size: 1.2rem;">
+            📧 Email Miss Grace About Ballet
+          </button>
         </div>
       </div>
 
@@ -246,97 +210,23 @@
       <div id="extra-art" class="extra-subview">
         <div class="glass-panel">
           <h2>Country Tops Art Room</h2>
-          <p>Pick a brush color and draw a picture for Miss Grace's chalkboard! You can even clear it or download your artwork.</p>
+          <p>Share your art interests with Miss Grace! Click the button below to send her an email about art.</p>
           <br>
-          <div class="art-container">
-            <div class="canvas-wrapper">
-              <canvas id="art-canvas"></canvas>
-            </div>
-            
-            <div class="art-controls">
-              <div class="filter-group">
-                <h3>Brush Palette</h3>
-                <div class="brush-colors">
-                  <div class="color-swatch active" style="background-color: #2D6A4F;" data-color="#2D6A4F"></div>
-                  <div class="color-swatch" style="background-color: #C5A059;" data-color="#C5A059"></div>
-                  <div class="color-swatch" style="background-color: #F2A1A8;" data-color="#F2A1A8"></div>
-                  <div class="color-swatch" style="background-color: #FAF7F0; border: 2px solid var(--cream-border);" data-color="#FAF7F0"></div>
-                  <div class="color-swatch" style="background-color: #1F362B;" data-color="#1F362B"></div>
-                  <div class="color-swatch" style="background-color: #FF5A5F;" data-color="#FF5A5F"></div>
-                  <div class="color-swatch" style="background-color: #3A86C8;" data-color="#3A86C8"></div>
-                  <div class="color-swatch" style="background-color: #FFD166;" data-color="#FFD166"></div>
-                  <div class="color-swatch" style="background-color: #06D6A0;" data-color="#06D6A0"></div>
-                  <div class="color-swatch" style="background-color: #8338EC;" data-color="#8338EC"></div>
-                </div>
-              </div>
-
-              <div class="size-slider-wrapper">
-                <h4>Brush Size: <span id="brush-size-val">8</span>px</h4>
-                <input type="range" id="brush-size" min="2" max="30" value="8">
-              </div>
-
-              <button class="btn btn-outline" id="art-eraser-btn" onclick="toggleEraser()">
-                <svg viewBox="0 0 24 24"><path d="M16.24 7.56l-5.66-5.66c-.78-.78-2.05-.78-2.83 0L2.09 7.56c-.78.78-.78 2.05 0 2.83l5.66 5.66c.39.39.9.59 1.41.59s1.02-.2 1.41-.59l5.66-5.66c.79-.79.79-2.05.01-2.83zm-8.49 6.36L3.5 9.67l4.24-4.24 4.24 4.24-4.23 4.25zM20 19h-7v2h7c1.1 0 2-.9 2-2s-.9-2-2-2z"/></svg>
-                Eraser
-              </button>
-
-              <button class="btn btn-pink" onclick="clearCanvas()">
-                <svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
-                Clear Board
-              </button>
-
-              <button class="btn btn-gold" onclick="downloadCanvas()">
-                <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
-                Save Painting
-              </button>
-            </div>
-          </div>
+          <button class="btn btn-outline" onclick="openEmailForArt()" style="width: 100%; height: 50px; font-size: 1.2rem;">
+            📧 Email Miss Grace About Art
+          </button>
         </div>
       </div>
 
       <!-- Sports Arena View -->
       <div id="extra-sports" class="extra-subview">
         <div class="glass-panel gold">
-          <h2>Country Tops Sports Goal Shootout</h2>
-          <p>Timing check! The kicker arrow is moving left and right. Press "Kick!" when the arrow aligns in the green center zone to score a goal on the keeper!</p>
+          <h2>Country Tops Sports</h2>
+          <p>Share your sports interests with Miss Grace! Click the button below to send her an email about sports.</p>
           <br>
-          <div class="sports-game">
-            <div class="game-score-display">
-              <div>Goals Scored: <span id="sports-score" style="color: var(--green-primary);">0</span></div>
-              <div>Trophies Won: <span id="sports-trophies" style="color: var(--gold-dark);">0</span></div>
-            </div>
-
-            <!-- Goal Center celebration banner -->
-            <div class="goal-celebration" id="goal-celebration">GOAL!! ⚽</div>
-
-            <!-- Pitch Scene -->
-            <div class="soccer-goal">
-              <div class="goal-target" id="sports-target">TARGET</div>
-              <!-- Small Keeper SVG -->
-              <svg class="goal-keeper" id="keeper" viewBox="0 0 50 80">
-                <circle cx="25" cy="15" r="10" fill="#FFF"/> <!-- cap -->
-                <circle cx="25" cy="22" r="7" fill="#FAD2E1"/> <!-- head -->
-                <rect x="15" y="30" width="20" height="30" rx="5" fill="#C5A059"/> <!-- jersey -->
-                <path d="M5 33c0 0 8-5 10 2M45 33c0 0-8-5-10 2" stroke="#FAD2E1" stroke-width="4" stroke-linecap="round"/> <!-- goalie gloves arms -->
-              </svg>
-            </div>
-
-            <div class="sports-pitch">
-              <!-- Soccer Ball SVG -->
-              <svg class="sports-ball" id="sports-ball" viewBox="0 0 50 50">
-                <circle cx="25" cy="25" r="23" fill="white" stroke="black" stroke-width="2"/>
-                <path d="M25 2l5 10 10 2-8 8 3 10-10-5-10 5 3-10-8-8 10-2z" fill="black"/>
-              </svg>
-            </div>
-
-            <!-- Slider bar controls -->
-            <div class="timing-bar-container">
-              <div class="target-zone"></div>
-              <div class="slider-indicator" id="sports-slider"></div>
-            </div>
-
-            <button class="btn btn-gold" id="btn-kick" onclick="shootGoal()" style="width: 100%; height: 50px; font-size: 1.2rem;">KICK THE BALL! ⚽</button>
-          </div>
+          <button class="btn btn-gold" onclick="openEmailForSports()" style="width: 100%; height: 50px; font-size: 1.2rem;">
+            📧 Email Miss Grace About Sports
+          </button>
         </div>
       </div>
 
@@ -349,7 +239,7 @@
           <div class="memory-grid" id="memory-board">
             <!-- Dynamically populated cards -->
           </div>
-          
+         
           <div class="playground-controls">
             <button class="btn btn-outline" onclick="resetMemoryGame()">Restart Memory Match</button>
             <span style="margin-left: 1.5rem; font-weight: 700; color: var(--text-dark);">Matches: <span id="memory-score">0</span> / 8</span>
@@ -419,7 +309,7 @@
               Generate Student Report Card
             </h3>
           </div>
-          
+         
           <div class="office-form">
             <div class="form-group">
               <label for="report-student-select">Student Name:</label>
@@ -427,7 +317,7 @@
             </div>
             <div class="form-group">
               <label for="report-comments">Miss Grace's Teacher Comments:</label>
-              <textarea id="report-comments" rows="3" placeholder="e.g. Has done an outstanding job learning math and science. Loves the art studio! Very polite in class." oninput="updateReportCardPreview()">An excellent learner who shows a wonderful curiosity for all subjects. Always completes lessons with a big smile!</textarea>
+              <textarea id="report-comments" rows="3" placeholder="e.g. Has done an outstanding job learning math and science. Loves the art studio! Very polite in class." oninput="updateReportCardPreview()"></textarea>
             </div>
             <button class="btn btn-gold" onclick="window.print()">Print / PDF Report Card</button>
           </div>
@@ -517,7 +407,7 @@
         <div class="lesson-intro-section">
           <p id="modal-description">Help Miss Grace count the circles and squares!</p>
         </div>
-        
+       
         <div class="lesson-interactive-area" id="modal-interactive-content">
           <!-- Dynamically populated per lesson type -->
         </div>
@@ -533,7 +423,7 @@
   <!-- Page Footer -->
   <footer>
     <p>
-      Made with 💖 for Country Tops Elementary &copy; 2026. Designed by Miss Grace.
+      Made with 💖 for Country Tops Elementary © 2026. Designed by Miss Grace.
     </p>
   </footer>
 

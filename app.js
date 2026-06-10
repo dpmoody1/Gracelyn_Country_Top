@@ -250,7 +250,7 @@ function animateConfetti() {
   }
 }
 
-// --- 65 Lessons Database ---
+// --- 65 Lessons Database (HARDER QUESTIONS) ---
 const lessonsData = [
   // ==================== MATH (17) ====================
   // Preschool Math
@@ -334,7 +334,7 @@ const lessonsData = [
       answer: "3:00"
     }
   },
-  // 2nd Grade Math
+  // 2nd Grade Math - HARDER
   {
     id: 7,
     title: "Skip Counting by 5s",
@@ -361,18 +361,18 @@ const lessonsData = [
       answer: "is less than (<)"
     }
   },
-  // 3rd Grade Math
+  // 3rd Grade Math - HARDER
   {
     id: 9,
     title: "Multiplication Table Builder",
     subject: "math",
     grade: "grade3",
-    description: "Solve this core multiplication grid question.",
+    description: "Solve this challenging multiplication problem.",
     type: "quiz",
     content: {
-      question: "What is 6 times 7 (6 x 7)?",
-      options: ["13", "36", "42", "49"],
-      answer: "42"
+      question: "What is 8 times 9 (8 x 9)?",
+      options: ["63", "72", "81", "56"],
+      answer: "72"
     }
   },
   {
@@ -380,25 +380,25 @@ const lessonsData = [
     title: "Fraction Fun",
     subject: "math",
     grade: "grade3",
-    description: "Fractions represent parts of a whole shape.",
+    description: "Challenge your fraction knowledge!",
     type: "quiz",
     content: {
-      question: "If you cut a pizza into 4 equal slices and eat 1 slice, what fraction did you eat?",
-      options: ["1/2", "1/4", "3/4", "1/3"],
-      answer: "1/4"
+      question: "If you cut a pizza into 8 equal slices and eat 3 slices, what fraction remains?",
+      options: ["3/5", "5/8", "3/8", "1/2"],
+      answer: "5/8"
     }
   },
-  // 4th Grade Math
+  // 4th Grade Math - HARDER
   {
     id: 11,
     title: "Division Dash",
     subject: "math",
     grade: "grade4",
-    description: "Solve the division equation correctly.",
+    description: "Solve this challenging division equation.",
     type: "spelling",
     content: {
-      question: "What is 72 divided by 8? (Type the number)",
-      answer: "9"
+      question: "What is 96 divided by 8? (Type the number)",
+      answer: "12"
     }
   },
   {
@@ -406,12 +406,12 @@ const lessonsData = [
     title: "Measuring Angles",
     subject: "math",
     grade: "grade4",
-    description: "Learn about the types of geometry angles.",
+    description: "Identify the angle types with precision.",
     type: "quiz",
     content: {
-      question: "What do we call an angle that measures exactly 90 degrees?",
+      question: "What do we call an angle that measures more than 90 degrees but less than 180 degrees?",
       options: ["Acute Angle", "Obtuse Angle", "Right Angle", "Straight Angle"],
-      answer: "Right Angle"
+      answer: "Obtuse Angle"
     }
   },
   {
@@ -419,25 +419,25 @@ const lessonsData = [
     title: "Area Explorer",
     subject: "math",
     grade: "grade4",
-    description: "Calculate the area inside a rectangular grid.",
+    description: "Calculate area with tricky dimensions.",
     type: "quiz",
     content: {
-      question: "What is the area of a rug that is 5 feet long and 4 feet wide?",
-      options: ["9 sq ft", "18 sq ft", "20 sq ft", "25 sq ft"],
-      answer: "20 sq ft"
+      question: "What is the area of a rug that is 7 feet long and 6 feet wide?",
+      options: ["13 sq ft", "26 sq ft", "42 sq ft", "35 sq ft"],
+      answer: "42 sq ft"
     }
   },
-  // 5th Grade Math
+  // 5th Grade Math - HARDER
   {
     id: 14,
     title: "Decimal Addition",
     subject: "math",
     grade: "grade5",
-    description: "Line up the decimal points to add these numbers.",
+    description: "Master decimal calculations!",
     type: "spelling",
     content: {
-      question: "What is 1.5 + 2.75? (Type the decimal number)",
-      answer: "4.25"
+      question: "What is 2.75 + 3.5? (Type the decimal number)",
+      answer: "6.25"
     }
   },
   {
@@ -445,12 +445,12 @@ const lessonsData = [
     title: "Volume Finder",
     subject: "math",
     grade: "grade5",
-    description: "Volume represents the space inside a 3D box (length x width x height).",
+    description: "Calculate 3D volume with precision.",
     type: "quiz",
     content: {
-      question: "What is the volume of a box that is 2 inches wide, 3 inches long, and 4 inches high?",
-      options: ["9 cubic inches", "12 cubic inches", "24 cubic inches", "48 cubic inches"],
-      answer: "24 cubic inches"
+      question: "What is the volume of a box that is 3 inches wide, 5 inches long, and 6 inches high?",
+      options: ["14 cubic inches", "30 cubic inches", "60 cubic inches", "90 cubic inches"],
+      answer: "90 cubic inches"
     }
   },
   {
@@ -458,12 +458,12 @@ const lessonsData = [
     title: "Order of Operations",
     subject: "math",
     grade: "grade5",
-    description: "Follow the PEMDAS rule (Multiplication before Addition!).",
+    description: "Follow PEMDAS carefully!",
     type: "quiz",
     content: {
-      question: "Solve: 5 + 3 x 2",
-      options: ["16", "11", "10", "13"],
-      answer: "11"
+      question: "Solve: 10 + 4 x 3 - 2",
+      options: ["20", "22", "40", "14"],
+      answer: "20"
     }
   },
   {
@@ -471,12 +471,12 @@ const lessonsData = [
     title: "Simplifying Fractions",
     subject: "math",
     grade: "grade5",
-    description: "Divide the numerator and denominator by their greatest common factor.",
+    description: "Find the simplest form.",
     type: "quiz",
     content: {
-      question: "What is the simplified form of 4/8?",
-      options: ["2/4", "1/2", "3/4", "1/3"],
-      answer: "1/2"
+      question: "What is the simplified form of 6/9?",
+      options: ["2/3", "1/3", "3/4", "2/4"],
+      answer: "2/3"
     }
   },
 
@@ -514,7 +514,7 @@ const lessonsData = [
     title: "Sight Words Spell",
     subject: "english",
     grade: "kindergarten",
-    description: "Type the sight word requested by Miss Grace.",
+    description: "Type the sight word correctly.",
     type: "spelling",
     content: {
       question: "Spell the common sight word 'the' (lowercase):",
@@ -540,7 +540,7 @@ const lessonsData = [
     title: "Vowels and Consonants",
     subject: "english",
     grade: "grade1",
-    description: "A, E, I, O, U are vowels. All other letters are consonants.",
+    description: "Identify vowels versus consonants.",
     type: "quiz",
     content: {
       question: "Which of these letters is a Vowel?",
@@ -553,7 +553,7 @@ const lessonsData = [
     title: "Compound Words",
     subject: "english",
     grade: "grade1",
-    description: "Put two separate words together to create a brand new word!",
+    description: "Combine two words into one!",
     type: "quiz",
     content: {
       question: "What word do you get when you combine SUN and FLOWER?",
@@ -561,16 +561,16 @@ const lessonsData = [
       answer: "Sunflower"
     }
   },
-  // 2nd Grade English
+  // 2nd Grade English - HARDER
   {
     id: 24,
     title: "Action Verbs",
     subject: "english",
     grade: "grade2",
-    description: "A noun is a person, place, or thing. A verb is an action word.",
+    description: "Find the action word in a complex sentence.",
     type: "quiz",
     content: {
-      question: "Identify the action Verb in this sentence: 'The happy puppy jumps over the grass.'",
+      question: "Identify the action Verb in this sentence: 'The happy puppy quickly jumps over the tall grass.'",
       options: ["happy", "puppy", "jumps", "grass"],
       answer: "jumps"
     }
@@ -580,26 +580,26 @@ const lessonsData = [
     title: "Plural Words",
     subject: "english",
     grade: "grade2",
-    description: "Plural means there is more than one of something.",
+    description: "Pluralize tricky words.",
     type: "quiz",
     content: {
-      question: "What is the correct plural form of the word 'child'?",
-      options: ["childs", "childes", "childrens", "children"],
-      answer: "children"
+      question: "What is the correct plural form of the word 'tooth'?",
+      options: ["tooths", "teeth", "tooths", "toothes"],
+      answer: "teeth"
     }
   },
-  // 3rd Grade English
+  // 3rd Grade English - HARDER
   {
     id: 26,
     title: "Synonym Finder",
     subject: "english",
     grade: "grade3",
-    description: "Synonyms are different words that mean the same thing.",
+    description: "Find words with similar meanings.",
     type: "quiz",
     content: {
-      question: "What is a synonym of the word 'HAPPY'?",
-      options: ["Angry", "Joyful", "Tired", "Sad"],
-      answer: "Joyful"
+      question: "What is a synonym of the word 'DIFFICULT'?",
+      options: ["Easy", "Challenging", "Simple", "Quick"],
+      answer: "Challenging"
     }
   },
   {
@@ -607,26 +607,26 @@ const lessonsData = [
     title: "Opposites (Antonyms)",
     subject: "english",
     grade: "grade3",
-    description: "Antonyms are words that have the opposite meaning.",
+    description: "Find true opposites.",
     type: "quiz",
     content: {
-      question: "What is the opposite (antonym) of the word 'HOT'?",
-      options: ["Warm", "Spicy", "Cold", "Bright"],
-      answer: "Cold"
+      question: "What is the opposite (antonym) of the word 'BRIGHT'?",
+      options: ["Shiny", "Dark", "Light", "White"],
+      answer: "Dark"
     }
   },
-  // 4th Grade English
+  // 4th Grade English - HARDER
   {
     id: 28,
     title: "Homophones",
     subject: "english",
     grade: "grade4",
-    description: "Homophones sound identical but are spelled differently and have different meanings.",
+    description: "Choose the correct homophone.",
     type: "quiz",
     content: {
-      question: "Which word fits in this blank: 'This is _______ classroom.'",
-      options: ["there", "their", "they're"],
-      answer: "their"
+      question: "Which word fits in this blank: 'The team won the _______ at the state competition.'",
+      options: ["price", "prize", "prise"],
+      answer: "prize"
     }
   },
   {
@@ -634,26 +634,26 @@ const lessonsData = [
     title: "Descriptive Adjectives",
     subject: "english",
     grade: "grade4",
-    description: "Adjectives describe or modify nouns.",
+    description: "Identify adjectives that describe quality.",
     type: "quiz",
     content: {
-      question: "In the phrase 'the shiny gold coin', what is the adjective that describes the brightness?",
-      options: ["the", "shiny", "gold", "coin"],
-      answer: "shiny"
+      question: "In the phrase 'the magnificent old mansion', which adjective describes age?",
+      options: ["the", "magnificent", "old", "mansion"],
+      answer: "old"
     }
   },
-  // 5th Grade English
+  // 5th Grade English - HARDER
   {
     id: 30,
     title: "Idioms Unlocked",
     subject: "english",
     grade: "grade5",
-    description: "An idiom is a phrase with a figurative meaning, not literal.",
+    description: "Understand figurative language.",
     type: "quiz",
     content: {
-      question: "If Miss Grace says your math quiz was a 'piece of cake', what does she mean?",
-      options: ["It was very easy", "It was sweet", "It was very hard", "It had frosting on it"],
-      answer: "It was very easy"
+      question: "If someone says 'time flies when you're having fun', what do they mean?",
+      options: ["Time literally moves faster", "Hours pass quickly when enjoying yourself", "Birds can tell time", "Fun should be short"],
+      answer: "Hours pass quickly when enjoying yourself"
     }
   },
   {
@@ -661,12 +661,12 @@ const lessonsData = [
     title: "Prefix Powers",
     subject: "english",
     grade: "grade5",
-    description: "A prefix goes at the beginning of a root word to alter its meaning.",
+    description: "Master word prefixes.",
     type: "quiz",
     content: {
-      question: "What does the prefix 'UN-' mean, like in unhappy or undo?",
+      question: "What does the prefix 'RE-' mean, like in rewrite or reread?",
       options: ["Very", "Again", "Not", "Before"],
-      answer: "Not"
+      answer: "Again"
     }
   },
   {
@@ -674,10 +674,10 @@ const lessonsData = [
     title: "Subject-Verb Agreement",
     subject: "english",
     grade: "grade5",
-    description: "Singular subjects need singular verbs, plural subjects need plural verbs.",
+    description: "Match subjects and verbs correctly.",
     type: "quiz",
     content: {
-      question: "Which verb correctly completes the sentence: 'They ______ going to the school gym.'",
+      question: "Which verb correctly completes the sentence: 'Neither the cat nor the dogs ______ going outside.'",
       options: ["is", "am", "are", "was"],
       answer: "are"
     }
@@ -687,11 +687,11 @@ const lessonsData = [
     title: "Punctuating Sentences",
     subject: "english",
     grade: "grade5",
-    description: "Verify capitalization, commas, and ending punctuation.",
+    description: "Get punctuation absolutely right.",
     type: "quiz",
     content: {
       question: "Which sentence has correct punctuation?",
-      options: ["Wow this is fun!", "Wow, this is fun!", "wow, this is fun", "Wow. this is fun!"],
+      options: ["Wow, this is fun!", "Wow this is fun!", "Wow; this is fun!", "Wow-- this is fun!"],
       answer: "Wow, this is fun!"
     }
   },
@@ -805,16 +805,16 @@ const lessonsData = [
       answer: "Ocean"
     }
   },
-  // 3rd Grade Science
+  // 3rd Grade Science - HARDER
   {
     id: 42,
     title: "The Water Cycle",
     subject: "science",
     grade: "grade3",
-    description: "Learn how water moves from Earth to the sky and back.",
+    description: "Master the water cycle stages.",
     type: "quiz",
     content: {
-      question: "What is it called when liquid water heats up and turns into gas steam?",
+      question: "When water from oceans rises into the atmosphere as an invisible gas, what is this process called?",
       options: ["Condensation", "Precipitation", "Evaporation", "Runoff"],
       answer: "Evaporation"
     }
@@ -824,15 +824,15 @@ const lessonsData = [
     title: "Simple Machines",
     subject: "science",
     grade: "grade3",
-    description: "Simple machines make physical work easier.",
+    description: "Identify the types of simple machines.",
     type: "quiz",
     content: {
-      question: "A sliding ramp is which type of simple machine?",
+      question: "Which simple machine consists of a grooved wheel with a rope or cable around it?",
       options: ["Lever", "Pulley", "Wheel and Axle", "Inclined Plane"],
-      answer: "Inclined Plane"
+      answer: "Pulley"
     }
   },
-  // 4th Grade Science
+  // 4th Grade Science - HARDER
   {
     id: 44,
     title: "Photosynthesis Green",
@@ -841,9 +841,9 @@ const lessonsData = [
     description: "Plants absorb light to synthesize their own sugar food.",
     type: "quiz",
     content: {
-      question: "What is the green pigment in plant leaves that absorbs sunlight?",
-      options: ["Oxygen", "Chlorophyll", "Glucose", "Carotenoid"],
-      answer: "Chlorophyll"
+      question: "What is the process called where plants use sunlight, water, and CO2 to make food and oxygen?",
+      options: ["Respiration", "Photosynthesis", "Decomposition", "Fermentation"],
+      answer: "Photosynthesis"
     }
   },
   {
@@ -851,26 +851,26 @@ const lessonsData = [
     title: "Solar System Secrets",
     subject: "science",
     grade: "grade4",
-    description: "Learn about the planetary order around the sun.",
+    description: "Learn about planetary order with precision.",
     type: "quiz",
     content: {
-      question: "Which planet is closest to the Sun?",
-      options: ["Venus", "Earth", "Mercury", "Mars"],
-      answer: "Mercury"
+      question: "Which planet is known for its beautiful rings and is the 6th from the Sun?",
+      options: ["Neptune", "Jupiter", "Saturn", "Uranus"],
+      answer: "Saturn"
     }
   },
-  // 5th Grade Science
+  // 5th Grade Science - HARDER
   {
     id: 46,
     title: "The Human Pump",
     subject: "science",
     grade: "grade5",
-    description: "Examine organ systems of the human body.",
+    description: "Examine the circulatory system.",
     type: "quiz",
     content: {
-      question: "Which muscular organ pumps oxygen-rich blood throughout the body?",
-      options: ["Lungs", "Brain", "Heart", "Stomach"],
-      answer: "Heart"
+      question: "The heart has four chambers. What are the two upper chambers called?",
+      options: ["Ventricles", "Atria", "Valves", "Septums"],
+      answer: "Atria"
     }
   },
   {
@@ -878,12 +878,12 @@ const lessonsData = [
     title: "Ecosystem Eating Roles",
     subject: "science",
     grade: "grade5",
-    description: "Animals are categorized by what they consume.",
+    description: "Understand food chains and roles.",
     type: "quiz",
     content: {
-      question: "What do we call an animal that eats only plants (no meat)?",
+      question: "What do we call an organism that feeds on both plants and animals?",
       options: ["Carnivore", "Herbivore", "Omnivore", "Decomposer"],
-      answer: "Herbivore"
+      answer: "Omnivore"
     }
   },
   {
@@ -891,12 +891,12 @@ const lessonsData = [
     title: "Gravity Discoverer",
     subject: "science",
     grade: "grade5",
-    description: "Gravity is the pull force that keeps our feet on the ground.",
+    description: "Master gravitational concepts.",
     type: "quiz",
     content: {
-      question: "Which scientist discovered the law of gravity after watching an apple fall?",
-      options: ["Albert Einstein", "Marie Curie", "Isaac Newton", "Thomas Edison"],
-      answer: "Isaac Newton"
+      question: "According to Newton's law of universal gravitation, what two factors determine the gravitational force between objects?",
+      options: ["Speed and distance", "Mass and distance", "Height and weight", "Density and volume"],
+      answer: "Mass and distance"
     }
   },
   {
@@ -904,12 +904,12 @@ const lessonsData = [
     title: "Types of Earth Rocks",
     subject: "science",
     grade: "grade5",
-    description: "Rocks are categorized by how they form.",
+    description: "Classify rocks by formation.",
     type: "quiz",
     content: {
-      question: "What type of rock is formed when hot magma or lava cools and hardens?",
+      question: "What type of rock forms when sedimentary or igneous rock is subjected to intense heat and pressure deep in the Earth?",
       options: ["Sedimentary Rock", "Metamorphic Rock", "Igneous Rock", "Fossilized Rock"],
-      answer: "Igneous Rock"
+      answer: "Metamorphic Rock"
     }
   },
 
@@ -1022,7 +1022,7 @@ const lessonsData = [
       answer: "George Washington"
     }
   },
-  // 3rd Grade Social Studies
+  // 3rd Grade Social Studies - HARDER
   {
     id: 58,
     title: "City Leadership",
@@ -1031,9 +1031,9 @@ const lessonsData = [
     description: "Who governs and leads our local communities?",
     type: "quiz",
     content: {
-      question: "What is the title of the leader of a city government?",
+      question: "What government official leads a state?",
       options: ["President", "Governor", "Mayor", "Senator"],
-      answer: "Mayor"
+      answer: "Governor"
     }
   },
   {
@@ -1049,7 +1049,7 @@ const lessonsData = [
       answer: "Thomas Edison"
     }
   },
-  // 4th Grade Social Studies
+  // 4th Grade Social Studies - HARDER
   {
     id: 60,
     title: "Three Government Branches",
@@ -1070,12 +1070,12 @@ const lessonsData = [
     description: "Pioneers traveled west across America.",
     type: "quiz",
     content: {
-      question: "What vehicle did pioneers travel in along the Oregon Trail?",
-      options: ["Steam Trains", "Covered Wagons", "Automobiles", "Horseback Only"],
-      answer: "Covered Wagons"
+      question: "Approximately in which decade did the largest migration on the Oregon Trail occur?",
+      options: ["1820s", "1840s-1850s", "1880s", "1920s"],
+      answer: "1840s-1850s"
     }
   },
-  // 5th Grade Social Studies
+  // 5th Grade Social Studies - HARDER
   {
     id: 62,
     title: "Ancient Pyramids",
@@ -1084,9 +1084,9 @@ const lessonsData = [
     description: "Explore world history and landmarks.",
     type: "quiz",
     content: {
-      question: "Which ancient civilization built the grand Pyramids of Giza?",
-      options: ["Ancient Romans", "Ancient Greeks", "Ancient Egyptians", "Aztecs"],
-      answer: "Ancient Egyptians"
+      question: "Which Pharaoh commanded the construction of the Great Pyramid of Khufu?",
+      options: ["Ramesses II", "Khufu", "Hatshepsut", "Tutankhamun"],
+      answer: "Khufu"
     }
   },
   {
@@ -1094,12 +1094,12 @@ const lessonsData = [
     title: "Supply and Demand",
     subject: "socialstudies",
     grade: "grade5",
-    description: "Explore the basics of market economics.",
+    description: "Explore advanced market economics.",
     type: "quiz",
     content: {
-      question: "If a toy becomes super rare (low supply) but everyone wants one (high demand), what happens to its price?",
-      options: ["The price goes UP", "The price goes DOWN", "The price stays the same"],
-      answer: "The price goes UP"
+      question: "When supply decreases but demand stays the same, what effect does this have on the price of a product?",
+      options: ["Price decreases", "Price increases", "Price stays the same", "Price fluctuates randomly"],
+      answer: "Price increases"
     }
   },
   {
@@ -1141,7 +1141,8 @@ let state = {
   sportsScore: 0,
   sportsTrophies: 0,
   announcement: "Welcome to Country Tops Elementary! Be sure to work hard on your lessons and try out our new Art Room and Dance Studio. Let's make it a wonderful week! - Miss Grace",
-  activeLesson: null
+  activeLesson: null,
+  currentScore: 0
 };
 
 // --- LocalStorage Integration ---
@@ -1256,7 +1257,8 @@ function renderLessonsGrid() {
           <svg viewBox="0 0 24 24">
             ${isCompleted 
               ? '<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>' 
-              : '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>'}
+              : '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-.66.6-1.2 1.35-1.2.75 0 1.35.54 1.35 1.2v2z"/>'
+            }
           </svg>
         </div>
       </div>
@@ -1347,6 +1349,7 @@ function openLesson(lessonId) {
   if (!lesson) return;
 
   state.activeLesson = lesson;
+  state.currentScore = 0; // Reset score for this lesson
   
   const modal = document.getElementById('lesson-modal');
   const modalHeader = document.getElementById('modal-header');
@@ -1417,6 +1420,7 @@ function checkQuizAnswer(btn, selection) {
     btn.classList.add('wrong');
     btn.disabled = true;
     playSound('incorrect');
+    state.currentScore -= 1; // Deduct 1 point for wrong answer
   }
 }
 
@@ -1425,7 +1429,7 @@ function renderSpellingContent(lesson, container) {
   container.innerHTML = `
     <h3 style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 1.25rem; text-align: center;">${content.question}</h3>
     <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: center;">
-      <input type="text" id="spelling-input" style="padding: 0.8rem 1rem; width: 100%; max-width: 280px; text-align: center; font-size: 1.2rem; font-weight: 700; border-radius: 8px; border: 2px solid var(--cream-border);" placeholder="Type answer here..." autofocus>
+      <input type="text" id="spelling-input" style="padding: 0.8rem 1rem; width: 100%; max-width: 280px; text-align: center; font-size: 1.2rem; font-weight: 700; border-radius: 8px; border: 2px solid var(--cream-border);" placeholder="Type your answer...">
       <button class="btn btn-pink" onclick="checkSpellingAnswer()" style="width: 100%; max-width: 280px;">Submit Answer</button>
     </div>
     <div id="spelling-feedback" style="margin-top: 1rem; text-align: center; font-weight: bold;"></div>
@@ -1454,6 +1458,7 @@ function checkSpellingAnswer() {
     feedback.innerText = "Try again! Double check spelling.";
     feedback.style.color = "var(--pink-medium)";
     playSound('incorrect');
+    state.currentScore -= 1; // Deduct 1 point for wrong answer
   }
 }
 
@@ -1618,6 +1623,7 @@ function checkPuzzleAnswer() {
     feedback.innerText = "Oops, sequence is incorrect. Try resetting!";
     feedback.style.color = "var(--pink-medium)";
     playSound('incorrect');
+    state.currentScore -= 1; // Deduct 1 point for wrong answer
   }
 }
 
@@ -1872,7 +1878,12 @@ function downloadCanvas() {
   link.click();
 }
 
-// --- ⚽ Sports Arena Shootout Game ---
+function openEmailForArt() {
+  playSound('click');
+  window.location.href = 'mailto:?subject=Check%20out%20my%20Art%20Project%20from%20Country%20Tops%20Elementary!&body=I%20just%20created%20a%20beautiful%20artwork%20in%20Miss%20Grace\'s%20Art%20Room.%20Come%20visit%20Country%20Tops%20Elementary%20learning%20hub%20at%20https://dpmoody1.github.io/Gracelyn_Country_Top/';
+}
+
+// --- ⚽ Sports Arena Shootout Game (RENAMED) ---
 let ballKicked = false;
 
 function shootGoal() {
@@ -1938,17 +1949,22 @@ function shootGoal() {
   }, 500);
 }
 
+function openEmailForSports() {
+  playSound('click');
+  window.location.href = 'mailto:?subject=Check%20out%20my%20Sports%20Score%20from%20Country%20Tops%20Elementary!&body=I%20just%20scored%20' + state.sportsScore + '%20goals%20in%20Miss%20Grace\'s%20Sports%20Arena.%20Come%20visit%20Country%20Tops%20Elementary%20learning%20hub%20at%20https://dpmoody1.github.io/Gracelyn_Country_Top/';
+}
+
 // --- 🎮 Playground (Memory Match Game) ---
 const schoolIcons = [
   // SVG Strings for cards
-  `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v2.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>`, // Globe
+  `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v2.93zm6.9-2.54c[...]
   `<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`, // Star
-  `<svg viewBox="0 0 24 24"><path d="M21.59 11.59l-9.17-9.17c-.78-.78-2.05-.78-2.83 0l-9.17 9.17c-.78.78-.78 2.05 0 2.83l9.17 9.17c.78.78 2.05.78 2.83 0l9.17-9.17c.78-.78.78-2.05 0-2.83zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>`, // Ring
+  `<svg viewBox="0 0 24 24"><path d="M21.59 11.59l-9.17-9.17c-.78-.78-2.05-.78-2.83 0l-9.17 9.17c-.78.78-.78 2.05 0 2.83l9.17 9.17c.78.78 2.05.78 2.83 0l9.17-9.17c.78-.78.78-2.05 0-2.83zM12 18c-[...]
   `<svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>`, // Graduation cap
   `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>`, // Information
-  `<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`, // Heart
+  `<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.5[...]
   `<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`, // Bubble
-  `<svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>` // Bell
+  `<svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2[...]
 ];
 
 let memoryCards = [];

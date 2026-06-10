@@ -1140,7 +1140,7 @@ let state = {
   activeExtra: 'dance',
   sportsScore: 0,
   sportsTrophies: 0,
-  announcement: "Welcome to Country Tops Elementary! Be sure to work hard on your lessons and try out our new Art Room and Dance Studio. Let's make it a wonderful week! - Miss Grace",
+  announcement: "Welcome to Country Tops Elementary! Be sure to work hard on your lessons and try out our new Fun Clubs. Let's make it a wonderful week! - Miss Grace",
   activeLesson: null,
   currentScore: 0
 };
@@ -1257,7 +1257,7 @@ function renderLessonsGrid() {
           <svg viewBox="0 0 24 24">
             ${isCompleted 
               ? '<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>' 
-              : '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-.66.6-1.2 1.35-1.2.75 0 1.35.54 1.35 1.2v2z"/>'
+              : '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6h4.2v2z"/>'
             }
           </svg>
         </div>
@@ -1429,7 +1429,7 @@ function renderSpellingContent(lesson, container) {
   container.innerHTML = `
     <h3 style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 1.25rem; text-align: center;">${content.question}</h3>
     <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: center;">
-      <input type="text" id="spelling-input" style="padding: 0.8rem 1rem; width: 100%; max-width: 280px; text-align: center; font-size: 1.2rem; font-weight: 700; border-radius: 8px; border: 2px solid var(--cream-border);" placeholder="Type your answer...">
+      <input type="text" id="spelling-input" style="padding: 0.8rem 1rem; width: 100%; max-width: 280px; text-align: center; font-size: 1.2rem; font-weight: 700; border-radius: 8px; border: 2px solid var(--cream-border);" placeholder="Type your answer here...">
       <button class="btn btn-pink" onclick="checkSpellingAnswer()" style="width: 100%; max-width: 280px;">Submit Answer</button>
     </div>
     <div id="spelling-feedback" style="margin-top: 1rem; text-align: center; font-weight: bold;"></div>
@@ -1690,281 +1690,39 @@ function switchExtraView(extraId) {
 
   document.getElementById(`extra-${extraId}`).classList.add('active');
 
-  // Trigger drawings setup if Art Canvas
-  if (extraId === 'art') {
-    initArtCanvas();
-  } else if (extraId === 'games') {
+  // Trigger drawings setup if needed
+  if (extraId === 'games') {
     initMemoryGame();
   }
 }
 
-// --- 💃 Dance Studio Ballet Controller ---
-function triggerDanceMove(moveClass) {
-  const dancer = document.getElementById('dancer');
-  const stage = document.getElementById('stage');
-  const status = document.getElementById('choreography-status');
-  if (!dancer) return;
-
-  // Clear previous moves
-  dancer.style.animation = 'none';
-  dancer.offsetHeight; // trigger reflow
-  
+// --- Email button functions ---
+function openEmailForBallet() {
   playSound('click');
-
-  // Apply animation
-  dancer.style.animation = `${moveClass} 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards`;
-  
-  // Set nice action text
-  const labelMap = {
-    'plie': "Performing a elegant Plié (bending the knees)... 🩰",
-    'pirouette': "Wheee! A spinning Pirouette! 🌪️",
-    'grandjete': "Leaping through the air: Grand Jeté! 🚀",
-    'arabesque': "Standing balance: Arabesque! 🦢",
-    'chasse': "Chassé slides across the floor! 💃"
-  };
-  status.innerText = labelMap[moveClass] || "Dancing!";
-
-  // Generate particles (floating music notes)
-  for (let i = 0; i < 6; i++) {
-    setTimeout(() => {
-      const note = document.createElement('div');
-      note.className = 'music-note';
-      note.innerHTML = ['♫', '♪', '♩', '♬'][Math.floor(Math.random() * 4)];
-      note.style.left = `${40 + Math.random() * 20}%`;
-      note.style.bottom = '90px';
-      note.style.setProperty('--x-offset', `${Math.random() * 80 - 40}px`);
-      note.style.setProperty('--rot', `${Math.random() * 40 - 20}deg`);
-      
-      stage.appendChild(note);
-      
-      // Auto cleanup
-      setTimeout(() => note.remove(), 2000);
-    }, i * 250);
-  }
-}
-
-function clearStage() {
-  const dancer = document.getElementById('dancer');
-  const status = document.getElementById('choreography-status');
-  if (dancer) {
-    dancer.style.animation = 'none';
-  }
-  status.innerText = "Curtain closes! Miss Grace curtsies! 💖";
-  playSound('cheer');
-  startConfetti();
-}
-
-// --- 🎨 Art Room Paint App ---
-let canvasEl = null;
-let canvasCtx = null;
-let isDrawing = false;
-let brushColor = '#2D6A4F';
-let brushSize = 8;
-let isEraser = false;
-
-function initArtCanvas() {
-  canvasEl = document.getElementById('art-canvas');
-  if (!canvasEl) return;
-  canvasCtx = canvasEl.getContext('2d');
-
-  // Scale canvas internally for crisp drawing
-  const rect = canvasEl.getBoundingClientRect();
-  canvasEl.width = rect.width;
-  canvasEl.height = rect.height;
-
-  canvasCtx.lineCap = 'round';
-  canvasCtx.lineJoin = 'round';
-  
-  // Attach Canvas Mouse Listeners
-  canvasEl.addEventListener('mousedown', startPaint);
-  canvasEl.addEventListener('mousemove', paint);
-  canvasEl.addEventListener('mouseup', stopPaint);
-  canvasEl.addEventListener('mouseout', stopPaint);
-
-  // Attach Touch Listeners (for iPads/Tablets)
-  canvasEl.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-    const touch = e.touches[0];
-    const rect = canvasEl.getBoundingClientRect();
-    isDrawing = true;
-    canvasCtx.beginPath();
-    canvasCtx.moveTo(touch.clientX - rect.left, touch.clientY - rect.top);
-  });
-  canvasEl.addEventListener('touchmove', (e) => {
-    e.preventDefault();
-    if (!isDrawing) return;
-    const touch = e.touches[0];
-    const rect = canvasEl.getBoundingClientRect();
-    canvasCtx.lineTo(touch.clientX - rect.left, touch.clientY - rect.top);
-    canvasCtx.strokeStyle = isEraser ? '#FFFFFF' : brushColor;
-    canvasCtx.lineWidth = brushSize;
-    canvasCtx.stroke();
-  });
-  canvasEl.addEventListener('touchend', stopPaint);
-
-  // Palette selectors
-  document.querySelectorAll('.color-swatch').forEach(sw => {
-    sw.addEventListener('click', (e) => {
-      playSound('click');
-      document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
-      sw.classList.add('active');
-      
-      brushColor = sw.getAttribute('data-color');
-      
-      // Turn off eraser
-      isEraser = false;
-      document.getElementById('art-eraser-btn').classList.remove('btn-pink');
-      document.getElementById('art-eraser-btn').classList.add('btn-outline');
-    });
-  });
-
-  // Brush size slider
-  const sizeSlider = document.getElementById('brush-size');
-  sizeSlider.addEventListener('input', (e) => {
-    brushSize = e.target.value;
-    document.getElementById('brush-size-val').innerText = brushSize;
-  });
-}
-
-function startPaint(e) {
-  isDrawing = true;
-  canvasCtx.beginPath();
-  const rect = canvasEl.getBoundingClientRect();
-  canvasCtx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
-}
-
-function paint(e) {
-  if (!isDrawing) return;
-  const rect = canvasEl.getBoundingClientRect();
-  canvasCtx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
-  canvasCtx.strokeStyle = isEraser ? '#FFFFFF' : brushColor;
-  canvasCtx.lineWidth = brushSize;
-  canvasCtx.stroke();
-}
-
-function stopPaint() {
-  if (isDrawing) {
-    canvasCtx.closePath();
-    isDrawing = false;
-  }
-}
-
-function toggleEraser() {
-  playSound('click');
-  isEraser = !isEraser;
-  const btn = document.getElementById('art-eraser-btn');
-  if (isEraser) {
-    btn.classList.remove('btn-outline');
-    btn.classList.add('btn-pink');
-  } else {
-    btn.classList.remove('btn-pink');
-    btn.classList.add('btn-outline');
-  }
-}
-
-function clearCanvas() {
-  playSound('click');
-  if (canvasCtx && canvasEl) {
-    canvasCtx.clearRect(0, 0, canvasEl.width, canvasEl.height);
-  }
-}
-
-function downloadCanvas() {
-  playSound('click');
-  if (!canvasEl) return;
-  const link = document.createElement('a');
-  link.download = 'miss-grace-art-project.png';
-  link.href = canvasEl.toDataURL();
-  link.click();
+  window.location.href = 'mailto:?subject=I%20am%20interested%20in%20ballet!&body=Hello%20Miss%20Grace%2C%20I%20would%20like%20to%20learn%20more%20about%20ballet%20from%20Country%20Tops%20Elementary.';
 }
 
 function openEmailForArt() {
   playSound('click');
-  window.location.href = 'mailto:?subject=Check%20out%20my%20Art%20Project%20from%20Country%20Tops%20Elementary!&body=I%20just%20created%20a%20beautiful%20artwork%20in%20Miss%20Grace\'s%20Art%20Room.%20Come%20visit%20Country%20Tops%20Elementary%20learning%20hub%20at%20https://dpmoody1.github.io/Gracelyn_Country_Top/';
-}
-
-// --- ⚽ Sports Arena Shootout Game (RENAMED) ---
-let ballKicked = false;
-
-function shootGoal() {
-  if (ballKicked) return; // Wait until reset
-  ballKicked = true;
-
-  playSound('soccer-kick');
-
-  const ball = document.getElementById('sports-ball');
-  const slider = document.getElementById('sports-slider');
-  const keeper = document.getElementById('keeper');
-  const celebration = document.getElementById('goal-celebration');
-
-  // Stop slider animation position
-  const sliderStyle = window.getComputedStyle(slider);
-  const sliderLeft = parseFloat(sliderStyle.left);
-  const containerWidth = slider.parentElement.offsetWidth;
-  const percent = (sliderLeft / containerWidth) * 100;
-
-  // Animate Ball
-  ball.classList.add('kicked');
-
-  // Randomize goalie dive direction
-  const diveRight = Math.random() > 0.5;
-  keeper.style.left = diveRight ? '70%' : '30%';
-
-  // Target success zone is between 42% and 58%
-  setTimeout(() => {
-    if (percent >= 40 && percent <= 60) {
-      // GOAL!
-      playSound('soccer-goal');
-      celebration.classList.add('show');
-      state.sportsScore++;
-      document.getElementById('sports-score').innerText = state.sportsScore;
-
-      // Earn trophies every 5 goals
-      if (state.sportsScore > 0 && state.sportsScore % 5 === 0) {
-        state.sportsTrophies++;
-        state.totalStars += 15; // Star reward
-        document.getElementById('sports-trophies').innerText = state.sportsTrophies;
-        document.getElementById('total-stars').innerText = state.totalStars;
-        document.getElementById('rc-preview-stars').innerText = state.totalStars;
-        startConfetti();
-        updateProgressUI();
-      }
-    } else {
-      // Goalkeeper Saved!
-      playSound('incorrect');
-      celebration.innerText = "SAVED! 🧤";
-      celebration.classList.add('show');
-    }
-
-    // Reset loop
-    setTimeout(() => {
-      ball.classList.remove('kicked');
-      keeper.style.left = '50%';
-      celebration.classList.remove('show');
-      celebration.innerText = "GOAL!! ⚽";
-      ballKicked = false;
-      saveToLocalStorage();
-    }, 1500);
-
-  }, 500);
+  window.location.href = 'mailto:?subject=I%20am%20interested%20in%20art!&body=Hello%20Miss%20Grace%2C%20I%20would%20like%20to%20learn%20more%20about%20art%20from%20Country%20Tops%20Elementary.';
 }
 
 function openEmailForSports() {
   playSound('click');
-  window.location.href = 'mailto:?subject=Check%20out%20my%20Sports%20Score%20from%20Country%20Tops%20Elementary!&body=I%20just%20scored%20' + state.sportsScore + '%20goals%20in%20Miss%20Grace\'s%20Sports%20Arena.%20Come%20visit%20Country%20Tops%20Elementary%20learning%20hub%20at%20https://dpmoody1.github.io/Gracelyn_Country_Top/';
+  window.location.href = 'mailto:?subject=I%20am%20interested%20in%20sports!&body=Hello%20Miss%20Grace%2C%20I%20would%20like%20to%20learn%20more%20about%20sports%20from%20Country%20Tops%20Elementary.';
 }
 
 // --- 🎮 Playground (Memory Match Game) ---
 const schoolIcons = [
   // SVG Strings for cards
-  `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v2.93zm6.9-2.54c[...]
+  `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v2.93zm6.9-2.54c.59-.93.9-2.01.9-3.16 0-3.54-2.9-6.43-6.43-6.43S5.04 8.46 5.04 12s2.9 6.43 6.43 6.43c1.59 0 3.06-.58 4.21-1.52l4.28 4.28c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-4.39-4.39z"/></svg>`,
   `<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`, // Star
-  `<svg viewBox="0 0 24 24"><path d="M21.59 11.59l-9.17-9.17c-.78-.78-2.05-.78-2.83 0l-9.17 9.17c-.78.78-.78 2.05 0 2.83l9.17 9.17c.78.78 2.05.78 2.83 0l9.17-9.17c.78-.78.78-2.05 0-2.83zM12 18c-[...]
+  `<svg viewBox="0 0 24 24"><path d="M21.59 11.59l-9.17-9.17c-.78-.78-2.05-.78-2.83 0l-9.17 9.17c-.78.78-.78 2.05 0 2.83l9.17 9.17c.78.78 2.05.78 2.83 0l9.17-9.17c.78-.78.78-2.05 0-2.83zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>`,
   `<svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>`, // Graduation cap
   `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>`, // Information
-  `<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.5[...]
+  `<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.5 11.35z"/></svg>`,
   `<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`, // Bubble
-  `<svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2[...]
+  `<svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>`
 ];
 
 let memoryCards = [];
@@ -2123,7 +1881,7 @@ function resetSchoolYear() {
     state.totalStars = 0;
     state.sportsScore = 0;
     state.sportsTrophies = 0;
-    state.announcement = "Welcome to Country Tops Elementary! Be sure to work hard on your lessons and try out our new Art Room and Dance Studio. Let's make it a wonderful week! - Miss Grace";
+    state.announcement = "Welcome to Country Tops Elementary! Be sure to work hard on your lessons and try out our new Fun Clubs. Let's make it a wonderful week! - Miss Grace";
     
     // Update local variables and save
     document.getElementById('bulletin-text').innerText = state.announcement;
